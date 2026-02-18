@@ -13,8 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://iaapc.com.br"),
   title: "IAAPC - Instituto Abraçar de Apoio aos Portadores de Câncer",
   description: "Acolhimento, esperança e suporte para pacientes com câncer. Ajude-nos a fazer a diferença na vida de pessoas que enfrentam o câncer.",
+  alternates: {
+    canonical: "/",
+  },
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
@@ -24,9 +28,24 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://iaapc.org.br",
+    url: "https://iaapc.com.br",
     title: "IAAPC - Instituto Abraçar de Apoio aos Portadores de Câncer",
     description: "Acolhimento, esperança e suporte para pacientes com câncer.",
+    siteName: "IAAPC",
+    images: [
+      {
+        url: "/logo-iaapc-icon-512-removebg-preview.png",
+        width: 512,
+        height: 512,
+        alt: "Logo do IAAPC",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IAAPC - Instituto Abraçar de Apoio aos Portadores de Câncer",
+    description: "Acolhimento, esperança e suporte para pacientes com câncer.",
+    images: ["/logo-iaapc-icon-512-removebg-preview.png"],
   },
 };
 
