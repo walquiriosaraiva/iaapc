@@ -1,0 +1,191 @@
+
+📁 ESTRUTURA DE ARQUIVOS PARA UPLOAD
+════════════════════════════════════════════════════════════════════════════════
+
+Todos os arquivos prontos para upload estão em:
+
+/home/walquirio/projetos/iaapc/.next/static/
+
+Estrutura completa:
+
+public_html/                              ← Raiz do seu domínio
+│
+├── index.html                            ← Criar este arquivo (veja abaixo)
+│
+└── static/                               ← Copiar toda esta pasta
+    └── _next/
+        ├── static/
+        │   ├── chunks/                   ← JavaScript compilado
+        │   │   ├── main-*.js
+        │   │   ├── page-*.js
+        │   │   └── ... (outros chunks)
+        │   │
+        │   └── css/                      ← Estilos CSS compilados
+        │       └── ... (arquivos .css)
+        │
+        └── image/                        ← Imagens otimizadas
+
+
+════════════════════════════════════════════════════════════════════════════════
+🔧 ARQUIVO index.html PARA CRIAR EM public_html/
+════════════════════════════════════════════════════════════════════════════════
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Instituto Abraçar de Apoio aos Portadores de Câncer - IAAPC. Acolhimento, esperança e suporte para pacientes com câncer.">
+    <title>IAAPC - Instituto Abraçar de Apoio aos Portadores de Câncer</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+    <div id="__next"></div>
+    <script src="/static/_next/static/chunks/main.js" defer></script>
+</body>
+</html>
+
+
+════════════════════════════════════════════════════════════════════════════════
+📤 PASSO A PASSO DO UPLOAD
+════════════════════════════════════════════════════════════════════════════════
+
+1️⃣  PASSO 1 - ABRIR FILEZILLA
+     • Baixe em: https://filezilla-project.org/download.php
+     • Instale no seu computador
+
+2️⃣  PASSO 2 - CRIAR CONEXÃO
+     • File → Site Manager
+     • Clique em "New Site"
+     • Preencha:
+       - Host: ftp.seudominio.com.br (ou IP do servidor)
+       - Protocol: SFTP (mais seguro que FTP)
+       - Username: seu_usuario_ftp
+       - Password: sua_senha_ftp
+     • Clique "Connect"
+
+3️⃣  PASSO 3 - NAVEGAR PARA public_html
+     • No painel DIREITO (servidor remoto), navegue até:
+       /public_html/ ou /www/
+     • Crie uma nova pasta (clique direito → "Create directory")
+     • Nomeie como: "iaapc" (ou deixe na raiz se preferir)
+
+4️⃣  PASSO 4 - UPLOAD DO index.html
+     • Crie um arquivo chamado index.html no seu PC
+     • Cole o conteúdo acima (seção "ARQUIVO index.html")
+     • Salve como: index.html
+     • Arraste para a pasta public_html/
+
+5️⃣  PASSO 5 - UPLOAD DA PASTA static/
+     • No painel ESQUERDO (computador local):
+       /home/walquirio/projetos/iaapc/.next/static/
+     • Marque a pasta "static"
+     • Arraste para public_html/
+     • Aguarde o upload terminar (pode levar alguns minutos)
+
+6️⃣  PASSO 6 - VERIFICAR UPLOAD
+     • Estrutura final em public_html/ deve ser:
+       ├── index.html
+       └── static/
+           └── _next/
+               ├── static/
+               └── image/
+
+7️⃣  PASSO 7 - TESTAR NO NAVEGADOR
+     • Abra: https://seu_dominio.com.br
+     • Se não funcionar, verifique:
+       - Se index.html existe em public_html/
+       - Se a pasta static/ tem o conteúdo correto
+       - Logs de erro em DevTools (F12)
+
+
+════════════════════════════════════════════════════════════════════════════════
+💡 DICA: USANDO LINHA DE COMANDO
+════════════════════════════════════════════════════════════════════════════════
+
+Se preferir usar terminal (mais rápido):
+
+# 1. Conectar ao servidor
+ssh seu_usuario@seu_dominio.com.br
+
+# 2. Navegue para a pasta pública
+cd ~/public_html
+
+# 3. Na sua máquina local, abra outro terminal e execute:
+scp -r /home/walquirio/projetos/iaapc/.next/static seu_usuario@seu_dominio.com.br:~/public_html/
+
+# 4. Criar o index.html no servidor
+cat > ~/public_html/index.html << 'ENDFILE'
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAAPC - Instituto Abraçar</title>
+</head>
+<body>
+    <div id="__next"></div>
+    <script src="/static/_next/static/chunks/main.js" defer></script>
+</body>
+</html>
+ENDFILE
+
+# 5. Pronto! Acesse seu domínio no navegador
+
+
+════════════════════════════════════════════════════════════════════════════════
+❓ TROUBLESHOOTING
+════════════════════════════════════════════════════════════════════════════════
+
+PROBLEMA: Página em branco quando acesso o domínio
+SOLUÇÃO:
+  • Abra DevTools (F12) → Console
+  • Procure por erros de "404" ou "arquivo não encontrado"
+  • Verifique se os caminhos dos arquivos em index.html estão corretos
+  • Confirme que a pasta static/ existe em public_html/
+
+PROBLEMA: Erro 404 "Not Found"
+SOLUÇÃO:
+  • index.html não está em public_html/
+  • Ou o domínio não aponta para public_html/
+  • Verifique em cPanel → Domains
+
+PROBLEMA: CSS/Estilos não carregam
+SOLUÇÃO:
+  • Pasta static/ não foi copiada para o servidor
+  • Tente novamente com FileZilla (arraste a pasta completa)
+  • Verifique permissões: pasta deve ser 755, arquivos 644
+
+PROBLEMA: Domínio leva para outro site
+SOLUÇÃO:
+  • Aguarde propagação DNS (até 24 horas)
+  • Limpe cache do navegador: Ctrl+Shift+Del
+  • Force refresh: Ctrl+F5
+
+
+════════════════════════════════════════════════════════════════════════════════
+✅ APÓS UPLOAD BEM-SUCEDIDO
+════════════════════════════════════════════════════════════════════════════════
+
+Seu site estará disponível em:
+https://seu_dominio.com.br
+
+A landing page do IAAPC estará completa com:
+  ✓ Header com navegação
+  ✓ Hero section atraente
+  ✓ Seção "Quem Somos"
+  ✓ Seção de Impacto
+  ✓ Seção "Como Ajudar"
+  ✓ Seção de Contato
+  ✓ Footer
+
+Personalizações que você pode fazer depois:
+  • Adicionar informações reais de contato
+  • Conectar botões de doação a um gateway de pagamento
+  • Integrar formulário de voluntariado
+  • Adicionar redes sociais
+  • Melhorar textos e imagens
+
+
+════════════════════════════════════════════════════════════════════════════════
+

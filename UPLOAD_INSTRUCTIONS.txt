@@ -1,0 +1,33 @@
+=== INSTRUÇÕES DE UPLOAD PARA HOSTGATOR ===
+
+1. USANDO FILEZILLA (Recomendado):
+   - Abra FileZilla
+   - File > Site Manager
+   - Host: ftp.seudominio.com.br
+   - Protocol: SFTP
+   - Username: seu_usuario_ftp
+   - Password: sua_senha_ftp
+   - Connect
+   - Navegue para public_html
+   - Faça upload de todos os arquivos em hostgator-deploy/
+
+2. USANDO SFTP NO TERMINAL:
+   sftp seu_usuario@seu_dominio.com.br
+   cd public_html
+   put -r hostgator-deploy/*
+   exit
+
+3. USANDO SCP NO TERMINAL:
+   scp -r hostgator-deploy/* seu_usuario@seu_dominio.com.br:~/public_html/
+
+4. POR UPLOAD DIRETO NO CPANEL:
+   - Acesse cPanel da Hostgator
+   - File Manager
+   - Navegue para public_html
+   - Upload dos arquivos via interface web
+
+=== DEPOIS DO UPLOAD ===
+1. Teste acessando seu domínio
+2. Se necessário, configure .htaccess para reescrever URLs
+3. Configure email de contato em contato@iaapc.org.br
+
