@@ -68,7 +68,7 @@ Você pode usar:
 2. **File → Site Manager**
 3. Clique em **New Site**
 4. Preencha com os dados da Hostgator:
-   - **Host**: ftp.seudominio.com.br
+   - **Host**: ftp.seudominio.org.br
    - **Protocol**: SFTP
    - **User**: seu_usuario_ftp
    - **Password**: sua_senha_ftp
@@ -79,7 +79,7 @@ Você pode usar:
 #### **Opção B: Terminal (SFTP Command Line)**
 ```bash
 # Conectar ao servidor
-sftp seu_usuario@seu_dominio.com.br
+sftp seu_usuario@seu_dominio.org.br
 
 # Navegar para o diretório
 cd public_html
@@ -97,10 +97,10 @@ exit
 #### **Opção C: Terminal (SCP - Copy Seguro)**
 ```bash
 # Copiar arquivo completo para o servidor
-scp -r /home/walquirio/projetos/iaapc seu_usuario@seu_dominio.com.br:~/public_html/
+scp -r /home/walquirio/projetos/iaapc seu_usuario@seu_dominio.org.br:~/public_html/
 
 # Ou apenas a build
-scp -r /home/walquirio/projetos/iaapc/.next seu_usuario@seu_dominio.com.br:~/public_html/
+scp -r /home/walquirio/projetos/iaapc/.next seu_usuario@seu_dominio.org.br:~/public_html/
 ```
 
 ### **Passo 3: Configurar na Hostgator**
@@ -138,7 +138,7 @@ npm run build
 
 1. **Ssh para o servidor**:
 ```bash
-ssh seu_usuario@seu_dominio.com.br
+ssh seu_usuario@seu_dominio.org.br
 ```
 
 2. **No servidor, instalar dependências**:
@@ -169,7 +169,7 @@ pm2 save
 
 Após o upload, acesse:
 ```
-https://seu_dominio.com.br
+https://seu_dominio.org.br
 ```
 
 ---

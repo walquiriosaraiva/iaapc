@@ -202,7 +202,7 @@ export default function HomePageClient() {
             <div className="flex items-center justify-center gap-4">
               <span className="text-2xl">✉️</span>
               <div>
-                <p className="font-semibold text-gray-900">secretaria@iaapc.com.br</p>
+                <p className="font-semibold text-gray-900">secretaria@iaapc.org.br</p>
               </div>
             </div>
             <div className="flex items-center justify-center gap-4">

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'IAAPC | Apoio a Pacientes com Câncer em Planaltina-DF',
     description:
       'Conheça o IAAPC e veja como apoiar pacientes com câncer em Planaltina-DF por doação, voluntariado e parcerias.',
-    url: 'https://iaapc.com.br/',
+    url: 'https://iaapc.org.br/',
     type: 'website',
   },
 };

@@ -55,7 +55,7 @@ cat > UPLOAD_INSTRUCTIONS.txt << 'EOF'
 1. USANDO FILEZILLA (Recomendado):
    - Abra FileZilla
    - File > Site Manager
-   - Host: ftp.seudominio.com.br
+   - Host: ftp.seudominio.org.br
    - Protocol: SFTP
    - Username: seu_usuario_ftp
    - Password: sua_senha_ftp
@@ -64,13 +64,13 @@ cat > UPLOAD_INSTRUCTIONS.txt << 'EOF'
    - Faça upload de todos os arquivos em hostgator-deploy/
 
 2. USANDO SFTP NO TERMINAL:
-   sftp seu_usuario@seu_dominio.com.br
+   sftp seu_usuario@seu_dominio.org.br
    cd public_html
    put -r hostgator-deploy/*
    exit
 
 3. USANDO SCP NO TERMINAL:
-   scp -r hostgator-deploy/* seu_usuario@seu_dominio.com.br:~/public_html/
+   scp -r hostgator-deploy/* seu_usuario@seu_dominio.org.br:~/public_html/
 
 4. POR UPLOAD DIRETO NO CPANEL:
    - Acesse cPanel da Hostgator

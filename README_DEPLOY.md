@@ -35,17 +35,17 @@
 3. Navegue até /public_html/
 4. Crie arquivo index.html (veja ESTRUTURA_FILES.txt)
 5. Faça upload da pasta .next/static/
-6. Acesse https://seu_dominio.com.br
+6. Acesse https://seu_dominio.org.br
 ```
 
 ### **Opção 2: Usar Terminal (Mais Rápido)**
 
 ```bash
 # Upload dos arquivos estáticos
-scp -r /home/walquirio/projetos/iaapc/.next/static seu_usuario@seu_dominio.com.br:~/public_html/
+scp -r /home/walquirio/projetos/iaapc/.next/static seu_usuario@seu_dominio.org.br:~/public_html/
 
 # Criar index.html no servidor
-ssh seu_usuario@seu_dominio.com.br
+ssh seu_usuario@seu_dominio.org.br
 cat > ~/public_html/index.html << 'EOF'
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -82,7 +82,7 @@ public_html/
 ## 📞 Dados que Você Precisa da Hostgator
 
 Encontre no **cPanel** → **FTP Accounts**:
-- 🔐 **Host FTP/SFTP**: `ftp.seudominio.com.br` ou IP
+- 🔐 **Host FTP/SFTP**: `ftp.seudominio.org.br` ou IP
 - 👤 **Usuário**: seu usuário de FTP
 - 🔑 **Senha**: sua senha de FTP
 - 📁 **Pasta**: geralmente `/public_html/`

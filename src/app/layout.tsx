@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://iaapc.com.br"),
+  metadataBase: new URL("https://iaapc.org.br"),
   title: "IAAPC - Instituto Abraçar de Apoio aos Portadores de Câncer",
   description: "Acolhimento, esperança e suporte para pacientes com câncer. Ajude-nos a fazer a diferença na vida de pessoas que enfrentam o câncer.",
   alternates: {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://iaapc.com.br",
+    url: "https://iaapc.org.br",
     title: "IAAPC - Instituto Abraçar de Apoio aos Portadores de Câncer",
     description: "Acolhimento, esperança e suporte para pacientes com câncer.",
     siteName: "IAAPC",

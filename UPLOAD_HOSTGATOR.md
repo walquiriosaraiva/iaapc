@@ -28,7 +28,7 @@ out/
 3. Crie novo site com dados do Hostgator:
    - **Nome:** IAAPC
    - **Protocolo:** SFTP
-   - **Host:** ftp.seudominio.com.br (ou IP do servidor)
+   - **Host:** ftp.seudominio.org.br (ou IP do servidor)
    - **Porta:** 22
    - **Usuário:** seu_cpanel_user
    - **Senha:** sua_senha
@@ -53,7 +53,7 @@ out/
 
 ### Passo 4: Testar
 ```
-Acesse: https://seudominio.com.br
+Acesse: https://seudominio.org.br
 ```
 
 **Deve aparecer:**
@@ -75,10 +75,10 @@ cd /home/walquirio/projetos/iaapc/out
 tar -czf iaapc.tar.gz .
 
 # Envia para servidor
-scp iaapc.tar.gz seu_usuario@ftp.seudominio.com.br:~/public_html/
+scp iaapc.tar.gz seu_usuario@ftp.seudominio.org.br:~/public_html/
 
 # Conecta via SSH e descompacta
-ssh seu_usuario@ftp.seudominio.com.br
+ssh seu_usuario@ftp.seudominio.org.br
 cd ~/public_html
 tar -xzf iaapc.tar.gz
 rm iaapc.tar.gz
@@ -88,7 +88,7 @@ rm iaapc.tar.gz
 
 ## 🚀 OPÇÃO 3: Upload via cPanel
 
-1. Acesse: `https://seudominio.com.br:2083` (cPanel)
+1. Acesse: `https://seudominio.org.br:2083` (cPanel)
 2. Faça login
 3. Procure **File Manager**
 4. Navegue até `public_html`

@@ -36,14 +36,14 @@ Via FileZilla:
 
 Via SCP (terminal):
 ```bash
-scp /home/walquirio/projetos/iaapc/index.html seu_usuario@seu_dominio.com.br:~/public_html/
+scp /home/walquirio/projetos/iaapc/index.html seu_usuario@seu_dominio.org.br:~/public_html/
 ```
 
 ---
 
 ## 🧪 Testar
 
-1. Acesse seu site: `https://seu_dominio.com.br`
+1. Acesse seu site: `https://seu_dominio.org.br`
 2. Abra DevTools: **F12**
 3. Limpe cache: **Ctrl+Shift+Del** → Limpe tudo
 4. Recarregue: **Ctrl+F5**

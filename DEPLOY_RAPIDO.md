@@ -18,7 +18,7 @@ npm run build
 2. **File** → **Site Manager** → **New Site**
 3. Preencha os dados da Hostgator:
    ```
-   Host: ftp.seudominio.com.br (ou IP do servidor)
+   Host: ftp.seudominio.org.br (ou IP do servidor)
    Protocol: SFTP (ou FTP)
    User: seu_usuario_ftp
    Password: sua_senha_ftp
@@ -31,10 +31,10 @@ npm run build
 #### **Opção B: Terminal (Linha de Comando)**
 ```bash
 # Conectar via SCP
-scp -r /home/walquirio/projetos/iaapc/.next/static seu_usuario@seu_dominio.com.br:~/public_html/
+scp -r /home/walquirio/projetos/iaapc/.next/static seu_usuario@seu_dominio.org.br:~/public_html/
 
 # Ou usar SFTP
-sftp seu_usuario@seu_dominio.com.br
+sftp seu_usuario@seu_dominio.org.br
 cd public_html
 put -r .next/static
 exit
@@ -67,7 +67,7 @@ Na Hostgator, crie um arquivo chamado **`index.html`** em `public_html`:
 
 Acesse seu domínio:
 ```
-https://seu_dominio.com.br
+https://seu_dominio.org.br
 ```
 
 Se aparecer em branco:
@@ -80,7 +80,7 @@ Se aparecer em branco:
 ## 📞 Dados Necessários da Hostgator
 
 Você precisa de:
-- **Host FTP/SFTP**: ftp.seu_dominio.com.br ou IP
+- **Host FTP/SFTP**: ftp.seu_dominio.org.br ou IP
 - **Usuário**: seu_usuario_ftp
 - **Senha**: sua_senha_ftp
 - **Caminho**: public_html/ ou www/

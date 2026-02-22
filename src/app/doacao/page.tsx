@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Doação via Pix | IAAPC',
     description:
       'Contribua com o IAAPC por Pix e fortaleça o suporte a pacientes com câncer em Planaltina-DF.',
-    url: 'https://iaapc.com.br/doacao',
+    url: 'https://iaapc.org.br/doacao',
     type: 'website',
   },
 };

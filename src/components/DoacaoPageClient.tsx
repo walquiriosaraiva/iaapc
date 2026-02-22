@@ -131,7 +131,7 @@ export default function DoacaoPageClient() {
           <div className="border border-rose-200 rounded-xl p-6">
             <h2 className="text-lg font-semibold text-gray-900 mb-2">Precisa de comprovante?</h2>
             <p className="text-gray-700">
-              Envie o comprovante para secretaria@iaapc.com.br para receber seu recibo.
+              Envie o comprovante para secretaria@iaapc.org.br para receber seu recibo.
             </p>
           </div>
         </div>

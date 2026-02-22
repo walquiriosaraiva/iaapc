@@ -90,7 +90,7 @@ Crie um arquivo chamado **`index.html`** com o seguinte conteúdo:
 - Clique em **"New Site"**
 - Preencha:
   ```
-  Host:     ftp.seudominio.com.br
+  Host:     ftp.seudominio.org.br
   Protocol: SFTP
   User:     seu_usuario_ftp
   Password: sua_senha_ftp
@@ -142,7 +142,7 @@ public_html/
 
 ### **Acessar o site:**
 ```
-https://seu_dominio.com.br
+https://seu_dominio.org.br
 ```
 
 ### **Se carregar em branco ou com erro:**
@@ -170,10 +170,10 @@ Se preferir não usar FileZilla:
 
 ```bash
 # Terminal 1: Copiar arquivos estáticos
-scp -r /home/walquirio/projetos/iaapc/.next/static seu_usuario@seu_dominio.com.br:~/public_html/
+scp -r /home/walquirio/projetos/iaapc/.next/static seu_usuario@seu_dominio.org.br:~/public_html/
 
 # Terminal 2: Conectar ao servidor
-ssh seu_usuario@seu_dominio.com.br
+ssh seu_usuario@seu_dominio.org.br
 
 # No servidor, criar index.html
 cat > ~/public_html/index.html << 'EOF'
@@ -216,7 +216,7 @@ exit
 - [ ] Conectei ao servidor via SFTP
 - [ ] Fiz upload da pasta `static/` para `public_html/`
 - [ ] Criei arquivo `index.html` em `public_html/`
-- [ ] Acessei `https://seu_dominio.com.br`
+- [ ] Acessei `https://seu_dominio.org.br`
 - [ ] Página carregou corretamente
 - [ ] CSS e JavaScript funcionando
 
