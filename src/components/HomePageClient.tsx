@@ -196,7 +196,7 @@ export default function HomePageClient() {
             <div className="flex items-center justify-center gap-4">
               <span className="text-2xl">📞</span>
               <div>
-                <p className="font-semibold text-gray-900">(61) 99402-2238</p>
+                <p className="font-semibold text-gray-900">(61) 99908-2744</p>
               </div>
             </div>
             <div className="flex items-center justify-center gap-4">
@@ -208,7 +208,7 @@ export default function HomePageClient() {
             <div className="flex items-center justify-center gap-4">
               <span className="text-2xl">📍</span>
               <div>
-                <p className="font-semibold text-gray-900">Planaltina-DF</p>
+                <p className="font-semibold text-gray-900">Estância 1 Módulo V Lote 18 A - Planaltina-DF</p>
               </div>
             </div>
           </div>
