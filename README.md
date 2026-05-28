@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# IAAPC - Instituto Abracar de Apoio aos Portadores de Cancer
 
-## Getting Started
+Site institucional do IAAPC com foco em informacao, acolhimento e captacao de doacoes para apoio a pacientes com cancer e suas familias em Planaltina-DF.
 
-First, run the development server:
+## Visao Geral
+
+O projeto foi desenvolvido em Next.js (App Router) com TypeScript e inclui:
+
+- Pagina inicial institucional
+- Pagina de doacao via Pix
+- SEO tecnico (metadata, robots e sitemap)
+- Suporte a PWA (manifesto e service worker)
+
+## Tecnologias
+
+- Next.js 15
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- ESLint 9
+
+## Estrutura Principal
+
+- `src/app/page.tsx`: rota principal
+- `src/app/doacao/page.tsx`: rota de doacao
+- `src/app/layout.tsx`: layout global e metadata base
+- `src/app/robots.ts`: regras de indexacao
+- `src/app/sitemap.ts`: sitemap
+- `src/components/HomePageClient.tsx`: interface da home
+- `src/components/DoacaoPageClient.tsx`: interface da pagina de doacao
+- `src/components/InstallPWA.tsx`: fluxo de instalacao PWA
+- `public/manifest.json`: configuracao PWA
+- `public/sw.js`: service worker
+
+## Requisitos
+
+- Node.js 20+
+- npm 10+
+
+## Execucao Local
+
+1. Instale as dependencias:
+
+```bash
+npm install
+```
+
+2. Rode em desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Acesse no navegador:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Scripts Disponiveis
 
-## Learn More
+- `npm run dev`: inicia ambiente de desenvolvimento com Turbopack
+- `npm run build`: gera build de producao
+- `npm run start`: inicia o servidor de producao
+- `npm run lint`: executa validacao de codigo com ESLint
 
-To learn more about Next.js, take a look at the following resources:
+## Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Este repositorio possui guias dedicados para publicacao e manutencao:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `DEPLOY_RAPIDO.md`
+- `DEPLOY_HOSTGATOR.md`
+- `README_DEPLOY.md`
+- `UPLOAD_HOSTGATOR.md`
 
-## Deploy on Vercel
+## PWA
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Recursos de Progressive Web App ja estao configurados no projeto. Para detalhes de instalacao e ajustes:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `PWA_SETUP.md`
+- `BOTAO_INSTALACAO_PWA.md`
+
+## SEO
+
+- Metadata por rota (home e doacao)
+- URL canonica
+- Open Graph
+- Arquivos `robots.ts` e `sitemap.ts`
+
+## Licenca
+
+Este projeto nao possui licenca definida no momento.
