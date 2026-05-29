@@ -89,4 +89,4 @@ Recursos de Progressive Web App ja estao configurados no projeto. Para detalhes 
 
 ## Licenca
 
-Este projeto nao possui licenca definida no momento.
+Este projeto está sob a licença MIT.
