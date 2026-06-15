@@ -4,7 +4,6 @@ import { FaInstagram } from 'react-icons/fa';
 import { FaX } from 'react-icons/fa6';
 import InstallPWA from '@/components/InstallPWA';
 import LinkButton from '@/components/LinkButton';
-import ChatSection from './Chat';
 
 export default function HomePageClient() {
   return (
