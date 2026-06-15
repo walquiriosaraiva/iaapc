@@ -73,6 +73,10 @@ Este repositorio possui guias dedicados para publicacao e manutencao:
 - `README_DEPLOY.md`
 - `UPLOAD_HOSTGATOR.md`
 
+Para o chat funcionar no frontend exportado estaticamente, configure a variavel publica abaixo no ambiente local e no GitHub Actions:
+
+- `NEXT_PUBLIC_CHAT_API_URL`: URL base da API serverless de chat publicada separadamente
+
 ## PWA
 
 Recursos de Progressive Web App ja estao configurados no projeto. Para detalhes de instalacao e ajustes:

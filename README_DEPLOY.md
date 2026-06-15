@@ -87,6 +87,20 @@ Encontre no **cPanel** → **FTP Accounts**:
 - 🔑 **Senha**: sua senha de FTP
 - 📁 **Pasta**: geralmente `/public_html/`
 
+## 🔐 Secret adicional para o chat
+
+Como o site agora consome uma API externa de chat, adicione este secret no repositório do GitHub antes do deploy:
+
+- `NEXT_PUBLIC_CHAT_API_URL` = URL base publicada do backend de chat
+
+Exemplo:
+
+```text
+https://seu-backend-de-chat.vercel.app
+```
+
+Esse valor entra no build do Next pelo workflow em `.github/workflows/deploy.yml`.
+
 ---
 
 ## ✨ O Que a Landing Page Tem
